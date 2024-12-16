@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Concevoir une application web de gestion d'équipe Ultimate Team pour EA FC 25, permettant aux utilisateurs de créer, personnaliser et gérer leurs formations">
+  <link rel="stylesheet" href="./assets/style/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,400,700" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>FUT Champions Web App Ultimate Team</title>
+</head>
+
+<body id="" class=" max-w-[100%]">
+  <nav class=" bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SPORT</span>
+   
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+
+        <button id="closemenu" data-collapse-toggle="navbar-sticky" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="menu items-center justify-between hidden lg:hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul
+          class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+           
+            </a>
+
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="formationPreview" class="mt-8 flex flex-col items-center gap-4">
+
+  </div>
+  <!-- Optionally, you can add a label showing the position -->
+  </div>
+  </div>
+
+  <section id="continer">
+
+    <div id="studiom" class="field relative field-structure-433 non-draggable-images  scale-[0.75] ">
+      <img src="https://www.futbin.com/design2/img/static/field-bg.svg" alt="" height="648" width="1009"
+        class="relative top-[30%] left-[44%] transform -translate-x-1/2 hidden lg:block">
+
+      <div class=" contin_card  relative -top-[27%] lg:-top-[57%] ">
+        <div>
+          <div id="ST" class="flex justify-center relative -left-[7%] -top-[100px]" >
+            <div onclick="swapContent(this)"
+              class="btnCB managercard-bg placeholder-enable-hover-shadow  relative top-[150px]  h-[230px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+              style="background-image: url('	https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+              id="player-ST">
+
+              <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+                <path
+                  d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                  stroke="currentColor" stroke-width="1.5" fill="none" />
+              </svg>
+
+              <!-- Optionally, you can add a label showing the position -->
+             
+            </div>
+            <h1
+            class="absolute w-[70px] h-[30px] bottom-[-170px]  bg-[#1e1d1d] left-1/2 transform -translate-x-1/2 text-center text-white rounded-full">
+            ST</h1>
+          </div>
+
+          <div id="CM" class="flex justify-center  -left-[100px]  relative  -top-[350px] gap-[380px]">
+            <div
+              class="btnCB relative top-[150px]   h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+              style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+              id="player-LW">
+
+              <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+                <path
+                  d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                  stroke="currentColor" stroke-width="1.5" fill="none" />
+              </svg>
+
+              <!-- Optionally, you can add a label showing the position -->
+              
+            </div>
+            <h1
+                class="roundone absolute w-[70px] h-[30px] bottom-[-170px] bg-[#1e1d1d] lg:left-[33%] left-[21%] transform -translate-x-1/2 text-center text-white rounded-full">
+                LW</h1>
+            <div
+              class="btnCB relative top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+              style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+              id="player-RW">
+
+              <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+                <path
+                  d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                  stroke="currentColor" stroke-width="1.5" fill="none" />
+              </svg>
+
+              <!-- Optionally, you can add a label showing the position -->
+             
+            </div>
+            <h1
+            class="round absolute w-[70px] h-[30px] bottom-[-170px] bg-[#1e1d1d] lg:left-[67%] left-[78%]  transform -translate-x-1/2 text-center text-white rounded-full">
+            RW</h1>
+          </div>
+
+          <div id="RM_RL" class="flex justify-evenly -left-[100px]   relative -top-[280px] gap-[120px] ">
+            <div id="LB" class="">
+              <div
+                class="btnCB relative top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+                style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+                id="player-LM">
+
+                <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                  class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+                  <path
+                    d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                    stroke="currentColor" stroke-width="1.5" fill="none" />
+                </svg>
+
+                <!-- Optionally, you can add a label showing the position -->
+               
+              </div>
+              <h1
+              class="absolute w-[70px] h-[30px]  bg-[#1e1d1d] lg:bottom-[-180px] bottom-[-148px] lg:left-[29%] left-[20%]  transform -translate-x-1/2 text-center text-white rounded-full">
+              LM</h1>
+            </div>
+            <div id="RL" class="">
+              <div
+                class="btnCB relative top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+                style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+                id="player-RL">
+
+                <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                  class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+                  <path
+                    d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                    stroke="currentColor" stroke-width="1.5" fill="none" />
+                </svg>
+
+                <!-- Optionally, you can add a label showing the position -->
+                
+              </div>
+              <h1 id="rom"
+                  class=" absolute w-[70px] h-[30px] lg:bottom-[-180px] bottom-[-163px] bg-[#1e1d1d] lg:left-[71%] left-[79%] transform -translate-x-1/2 text-center text-white rounded-full">
+                  RL</h1>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="CDM" class="flex justify-center -left-[7%]  relative -top-[400px]">
+          <div
+            class="btnCB relative top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+            style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+            id="player-CDM">
+
+            <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+              class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+              <path
+                d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+
+            <!-- Optionally, you can add a label showing the position -->
+            
+          </div>
+          <h1
+              class="absolute w-[70px] h-[30px] bottom-[-170px] bg-[#1e1d1d] left-1/2 transform -translate-x-1/2 text-center text-white rounded-full">
+              CDM</h1>
+
+        </div>
+
+
+        <div id="LB_RB" class=" flex justify-evenly  -left-[100px]  relative -top-[480px]  gap-[500px]">
+
+          <div id="LB" class="">
+            <div
+              class="btnCB  relative top-[150px] h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+              style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+              id="player-LB">
+
+              <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+                <path
+                  d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                  stroke="currentColor" stroke-width="1.5" fill="none" />
+              </svg>
+
+              <!-- Optionally, you can add a label showing the position -->
+             
+            </div>
+            <h1
+            class="absolute w-[70px] h-[30px] bottom-[-180px] bg-[#1e1d1d] left-[21%] transform -translate-x-1/2 text-center text-white rounded-full">
+            LB</h1>
+          </div>
+          <div id="RB" class="">
+            <div
+              class="btnCB relative top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+              style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+              id="player-RB">
+
+              <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+                <path
+                  d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                  stroke="currentColor" stroke-width="1.5" fill="none" />
+              </svg>
+
+              <!-- Optionally, you can add a label showing the position -->
+              
+            </div>
+            <h1
+                class="absolute w-[70px] h-[30px] bottom-[-168px] bg-[#1e1d1d] left-[79%] transform -translate-x-1/2 text-center text-white rounded-full">
+                RB</h1>
+          </div>
+
+        </div>
+        <div id="player-CBB" class="flex justify-center -left-[100px]  relative -top-[640px] gap-[80px] lg:gap-[200px]">
+          <div
+            class="btnCB relative top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+            style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+            id="player-CBL">
+
+            <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+              class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+              <path
+                d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+
+            <!-- Optionally, you can add a label showing the position -->
+           
+          </div>
+          <h1
+          class="absolute  w-[70px] h-[30px] bottom-[-180px] bg-[#1e1d1d] left-[25%] lg:left-[39%] transform -translate-x-1/2 text-center text-white rounded-full">
+          CBL</h1>
+          <div
+            class="btnCB relative top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+            style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+            id="player-CBR">
+
+            <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+              class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+              <path
+                d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+
+            <!-- Optionally, you can add a label showing the position -->
+           
+          </div>
+          <h1
+          class="absolute  w-[70px] h-[30px] bottom-[-182px] bg-[#1e1d1d] left-[73%]  lg:left-[61%] transform -translate-x-1/2 text-center text-white rounded-full">
+          CBR</h1>
+        </div>
+        <div id="GK" class="flex justify-center -left-[7%]  relative -top-[800px] gap-[280px]">
+          <div
+            class="btnCB relative top-[200px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+            style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+            id="player-GK">
+
+            <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+              class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+              <path
+                d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+                stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+
+           
+            <!-- Optionally, you can add a label showing the position -->
+          </div>
+          <h1
+          class="absolute w-[70px] h-[30px] bottom-[-220px] bg-[#1e1d1d] left-1/2 transform -translate-x-1/2 text-center text-white rounded-full">
+          GK</h1>
+        </div>
+
+      </div>
+
+    </div>
+
+    <section
+      class="hidden fixed top-[53%]  scale-[0.70]  flex text-white flex-col px-4 py-5 bg-slate-600 rounded-md shadow-md  w-[90%]  md:max-w-[600px] md:min-w-[300px]  translate-y-[-50%] left-[50%] translate-x-[-50%] z-10"
+      id="pop_up_ajoute">
+
+      <button id="closeButton" class="w-[30px] h-[30px] absolute right-4 top-2 bg-blue-600">X</button>
+
+      <h2 class="text-lg mx-auto font-bold text-white mb-3">Add Player</h2>
+
+      <form action="" class="flex flex-col space-y-6" id="add-player-form">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div>
+            <label for="playerName" class="block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Nom du
+              Joueur</label>
+            <input type="text" id="playerName"
+              class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+              placeholder="Entrez le nom du joueur">
+          </div>
+          <div>
+            <label for="clup" class="block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Club du Joueur</label>
+            <input type="text" id="clup"
+              class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+              placeholder="Nom du club">
+          </div>
+        </div>
+
+        <div>
+          <label for="position" class="block text-gray-200 font-semibold mb-2 text-sm sm:text-base">
+            Position du Joueur
+          </label>
+          <select id="position" onchange="changer_lesstats(this.value)"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-black text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <option value="" disabled selected>Choisissez une position</option>
+            <option value="player-GK">Gardien (GK)</option>
+            <option value="player-CBL">Défenseur Central Gauche (CBL)</option>
+            <option value="player-CDM">Milieu Défensif Central (CDM)</option>
+            <option value="player-LB">Arrière Gauche (LB)</option>
+            <option value="player-LM">Milieu Gauche (LM)</option>
+            <option value="player-LW">Ailier Gauche (LW)</option>
+            <option value="player-RB">Arrière Droit (RB)</option>
+            <option value="player-RL">Arrière Gauche (RL)</option>
+            <option value="player-ST">Attaquant (ST)</option>
+            <option value="player-CBR">Défenseur Central Droit (CBR)</option>
+            <option value="player-RW">Ailier Droit (RW)</option>
+            <option value="chang_1">Option supplémentaire 1</option>
+            <option value="chang_2">Option supplémentaire 2</option>
+            <option value="chang_3">Option supplémentaire 3</option>
+            <option value="chang_4">Option supplémentaire 4</option>
+            <option value="chang_5">Option supplémentaire 5</option>
+          </select>
+
+
+          <div>
+            <label for="nationality"
+              class="block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Nationalité</label>
+            <input type="text" id="nationality"
+              class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+              placeholder="Entrez la nationalité (URL de l'image)">
+          </div>
+
+          <div>
+            <label for="flag" class="block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Flag</label>
+            <input type="text" id="flag"
+              class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+              placeholder="Entrez la nationalité">
+          </div>
+
+          <div>
+            <label for="photosrc" class="block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Photo du
+              Joueur</label>
+            <input type="text" id="photosrc"
+              class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+              placeholder="URL de la photo du joueur">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            <div>
+              <label for="pace" class="pace block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Vitesse
+                (PAC)*</label>
+              <input type="number" id="pace" value="97"
+                class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+                placeholder="Ex: 97">
+            </div>
+            <div>
+              <label for="shooting" class="shooting block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Tir
+                (SHO)*</label>
+              <input type="number" id="shooting" value="95"
+                class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+                placeholder="Ex: 95">
+            </div>
+            <div>
+              <label for="passing" class="passing block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Passes
+                (PAS)*</label>
+              <input type="number" id="passing" value="94"
+                class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+                placeholder="Ex: 94">
+            </div>
+            <div>
+              <label for="dribbling"
+                class="dribbling block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Dribble
+                (DRI)*</label>
+              <input type="number" id="dribbling" value="99"
+                class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+                placeholder="Ex: 99">
+            </div>
+            <div>
+              <label for="defending"
+                class="defending block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Défense
+                (DEF)*</label>
+              <input type="number" id="defending" value="35"
+                class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+                placeholder="Ex: 35">
+            </div>
+            <div>
+              <label for="physical"
+                class="physical block text-gray-200 font-semibold mb-2 text-sm sm:text-base">Physique
+                (PHY)*</label>
+              <input type="number" id="physical" value="86"
+                class="w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+                placeholder="Ex: 68">
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="button" id="btnajout"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 my-4 py-3 rounded-lg transition-colors duration-300">Ajouter</button>
+          </div>
+      </form>
+    </section>
+    <div class="mb-4 flex justify-around overflow-hidden h-[-150%] lg:h-[100%] gap-8 relative " id="carousel-cards">
+    </div>
+
+    <div id="Photo_du_Joueur"
+      class="hidden  scale-[0.70]  items-center gap-8 h-[580px]  max-w-[200px] justify-center fixed top-[10%] left-[80%] lg:top-[10%] lg:left-[80%] z-20 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-xl overflow-x-auto">
+
+    </div>
+
+    
+  
+
+    <div class="bg-gray-900 text-gray-100 min-h-screen flex flex-col items-center">
+
+      <!-- alert -->
+      <div id="alert_Danger" class=" hidden fixed top-8 left-[80%] -translate-x-1/2  z-50 flex w-[30%] " role="alert">
+        <div class="toast Error"
+          style=" --color: #f24d4c; background-image: linear-gradient(to right, #f24d4c55, #22242F 30%);">
+          <i class="fa-solid fa-circle-check"></i>
+          <div class="content">
+            <div class="title">Info</div>
+            <span> Position or name player is already occupied</span>
+          </div>
+          <i class="fa-solid fa-xmark" onclick="(this.parentElement).remove()"></i>
+        </div>
+      </div>
+      <div id="Success_alert" class="hidden fixed z-50 top-8 left-[80%] -translate-x-1/2  items-center p-4 mb-4 text-sm"
+        role="alert">
+        <div class="toast Info">
+          <i class="fa-solid fa-circle-check"></i>
+          <div class="content">
+            <div class="title">Success</div>
+            <span>This is a success toast.</span>
+          </div>
+          <i class="fa-solid fa-xmark" onclick="(this.parentElement).remove()"></i>
+        </div>
+      </div>
+
+      <div id="changmont" class="  flex justify-evenly -top-[1050px] -left-[140px] lg:-left-[100px]  relative lg:-top-[950px] flex-wrap">
+
+        <div
+          class="btnCB relative scale-[0.70]   top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+          style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+          id="chang_1" onclick="swapContent(this)">
+
+          <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+            class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+            <path
+              d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+              stroke="currentColor" stroke-width="1.5" fill="none" />
+          </svg>
+
+          <!-- Optionally, you can add a label showing the position -->
+
+        </div>
+        <div
+          class="btnCB scale-[0.70]   relative top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+          style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+          id="chang_2">
+
+          <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+            class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+            <path
+              d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+              stroke="currentColor" stroke-width="1.5" fill="none" />
+          </svg>
+        </div>
+        <div
+          class="btnCB scale-[0.70]   relative top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+          style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+          id="chang_3">
+
+          <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+            class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+            <path
+              d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+              stroke="currentColor" stroke-width="1.5" fill="none" />
+          </svg>
+
+        </div>
+        <div
+          class="btnCB relative scale-[0.70]   top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+          style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+          id="chang_4">
+
+          <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+            class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+            <path
+              d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+              stroke="currentColor" stroke-width="1.5" fill="none" />
+          </svg>
+
+
+        </div>
+        <div
+          class="btnCB scale-[0.70]   relative top-[150px]  h-[240px] bg-cover bg-center bg-none p-4 z-[2] transition ease-in duration-200"
+          style="background-image: url('https://assets.fut.gg/frontend/assets/card-empty-bg-25.2.-CHha6vD_.png');"
+          id="chang_5">
+
+          <svg width="100" height="100" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+            class="text-green-700 relative left-[62%] top-[27%] -translate-x-1/2">
+            <path
+              d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z"
+              stroke="currentColor" stroke-width="1.5" fill="none" />
+          </svg>
+
+          <!-- Optionally, you can add a label showing the position -->
+
+        </div>
+
+      </div>
+    </div>
+    <!-- Sidebar card with specific height and width -->
+    <div id="menu" class=" top-0  lg:block hidden  w-80 p-6 bg-gray-800 text-white rounded-lg shadow-lg  top-72 right-8 absolute z-50 lg:z-10">
+      <div class="text-center">
+        <button class="w-full bg-green-500 text-white py-2 rounded-lg text-lg" onclick="ajoutePlayers()">Add Player</button>
+      </div>
+    
+      <div class="mt-6 ">
+        <label for="squad" class="block text-sm" >Change Squad</label>
+        <select id="squad" onclick="setFormation(this.value)"  class="w-full bg-gray-700 text-white p-2 rounded-lg mt-2">
+          <option value="433" onclick="setFormation('433')">4-3-3</option>
+          <option value="4141" onclick="setFormation('4141')">4-1-4-1</option>
+        
+        </select>
+      </div>
+    
+      <div class="mt-6">
+        <div id="flagg" class="grid grid-cols-3 gap-4">
+          
+      </div>
+    
+      <div class="mt-6">
+        <label for="chemistry" class="block text-sm">Total Chemistry</label>
+        <input type="range" id="chemistry" min="0" max="100" value="92" class="w-full mt-2 rounded-lg h-2 bg-gradient-to-r from-green-400 via-yellow-400 to-red-500">
+        <div class="flex justify-between mt-2 text-sm">
+          <span>0</span><span>92/100</span><span>100</span>
+        </div>
+      </div>
+    
+      <div class="mt-6 text-center">
+        <span class="text-xl">0</span>
+      </div>
+    </div>
+    
+  </section>
+
+  
+
+</body>
+<script src="./assets/js/script.js"></script>
+
+</html>
